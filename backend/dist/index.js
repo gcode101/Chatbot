@@ -1,9 +1,14 @@
-import express from 'express';
-const app = express();
-//Middlewares
-app.use(express.json());
+import app from './app.js';
+import { connectDB } from './db/connection.js';
+const PORT = process.env.PORT || 3000;
 //Connections
-app.listen(3000, () => {
-    console.log(`server running on port 3000`);
+connectDB()
+    .then(() => {
+    app.listen(PORT, () => {
+        console.log(`server running on port ${PORT}`);
+    });
+})
+    .catch((error) => {
+    console.log(error);
 });
 //# sourceMappingURL=index.js.map

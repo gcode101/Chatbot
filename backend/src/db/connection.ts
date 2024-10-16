@@ -4,6 +4,7 @@ const DBURL = process.env.MONGODB_URL;
 async function connectDB() {
     try{
         connect(DBURL);
+        console.log("Connected to DB");
     }catch(error){
         console.log(error);
         throw new Error("Unable to connect to database");
