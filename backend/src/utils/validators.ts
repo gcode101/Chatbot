@@ -17,3 +17,7 @@ export const signupValidator = [
     body("email").trim().isEmail().withMessage("Email not valid"),
     body("password").trim().isLength({min: 8}).withMessage("Password needs at least 8 characters")
 ]
+
+export const loginValidator = [
+    ...signupValidator
+]
