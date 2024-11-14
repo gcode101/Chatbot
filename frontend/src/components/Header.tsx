@@ -1,6 +1,14 @@
+import { AppBar, Toolbar } from "@mui/material";
 
 const Header = () => {
-    return <h1>Nav Bar</h1>
+    return (
+        <AppBar sx={{
+            bgcolor: "transparent",
+            position: "static",
+        }}>
+            <Toolbar sx={{display: "flex"}}>  </Toolbar>
+        </AppBar>
+    );
 }
 
 export default Header;
