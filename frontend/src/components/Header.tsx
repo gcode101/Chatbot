@@ -1,4 +1,5 @@
 import { AppBar, Toolbar } from "@mui/material";
+import Logo from "./shared/Logo";
 
 const Header = () => {
     return (
@@ -6,7 +7,7 @@ const Header = () => {
             bgcolor: "transparent",
             position: "static",
         }}>
-            <Toolbar sx={{display: "flex"}}>  </Toolbar>
+            <Toolbar sx={{display: "flex"}}> <Logo /> </Toolbar>
         </AppBar>
     );
 }
